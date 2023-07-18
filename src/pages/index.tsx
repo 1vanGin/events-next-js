@@ -14,14 +14,14 @@ export default function Home() {
       <div className="flex justify-end mb-3">
         {status === "unauthenticated" ? (
           <Link
-            className="h-10 px-6 font-semibold rounded-md bg-green-600 text-white align-middle leading-10"
+            className="h-10 px-6 font-semibold rounded-md bg-green-500 text-white align-middle leading-10"
             href="/api/auth/signin"
           >
             Войти
           </Link>
         ) : (
           <Link
-            className="h-10 px-6 font-semibold rounded-md bg-red-600 text-white align-middle leading-10"
+            className="h-10 px-6 font-semibold rounded-md bg-red-500 text-white align-middle leading-10"
             href="/api/auth/signout"
           >
             Выйти

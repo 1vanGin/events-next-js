@@ -1,6 +1,4 @@
 import { EventDetailProps } from "@/shared/api";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
 export const EventDetail = ({
   title,
@@ -8,21 +6,12 @@ export const EventDetail = ({
   date,
   participations,
 }: EventDetailProps) => {
-  const {
-    query: { id },
-  } = useRouter();
   return (
     <div>
-      <div className="px-4 sm:px-0 flex justify-between items-center">
+      <div className="px-4 sm:px-0">
         <h3 className="text-base font-semibold leading-7 text-gray-900">
           Информация о событии
         </h3>
-        <Link
-          className="h-10 px-6 font-semibold rounded-md bg-blue-700 text-white align-middle leading-10"
-          href={`/events/${id}/edit`}
-        >
-          Редактировать
-        </Link>
       </div>
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">

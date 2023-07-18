@@ -31,6 +31,7 @@ export const eventRouter = router({
       return prisma.event.findUnique({
         where: input,
         select: {
+          authorId: true,
           title: true,
           description: true,
           date: true,
